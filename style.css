@@ -1,0 +1,389 @@
+/*
+  
+--- 01 TYPOGRAPHY SYSTEM
+
+
+- Font size(px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font-weight:
+Default: 400
+Medium: 500
+Semi-bold: 600
+Bold: 700
+
+
+- Line-height: 
+Default: 1
+Small: 1.05
+Medium: 1.2
+Paragraph default: 1.6
+Large: 1.8
+
+- Letter spacing
+-0.5px
+0.75px
+
+--- 02 COLORS
+
+- Primary: #e1b20b 
+
+- Tints: 
+#e4ba23
+#edd16d
+#fcf7e7
+
+
+
+- Shades: 
+#b48e09
+#715906
+
+- Accents:
+
+- Grays:
+
+#888
+#767676 ( lighest gray allowed on #fcf7e7 )
+#6f6f6f ( lightest gray allowed on #fdf2e9 )
+#555
+#333
+
+--- 05 SHADOWS
+
+0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+
+
+
+--- 06 BORDER-RADIUS
+
+Default: 9px
+Medium: 11px
+
+
+
+
+--- 07 WHITESPACE
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+/* SETTING UP INITIAL SPACING, FONTS, AND BOX-SIZING */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* Specifying a fixed pixel size */
+  /* 10px/16px = 0.625 = 62.5% */
+  font-size: 62.5%;
+  overflow-x: hidden;
+  /* Does NOT work on Safari and also not on MicroSoft edge */
+  /* scroll-behavior: smooth; */
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1;
+  font-weight: 500;
+  color: #555;
+  /* height: 100vh; */
+  /* Only works if there is nothing absolutely
+  positioned in relation to body */
+  overflow-x: hidden;
+  background: linear-gradient(90deg, #e4ba23 71%, #2e3944 30%, #2e3944);
+}
+
+*:focus {
+  outline: none;
+  /* outline: 4px dotted #;
+  outline-offset: 8px; */
+  box-shadow: 0 0 0 0.8rem rgb(67, 53, 3, 0.6);
+}
+
+/********************************/
+
+/* GENERAL RESUABEL GRID */
+
+/********************************/
+
+.container {
+  /* 1236px */
+  max-width: 128rem;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.grid {
+  display: grid;
+  column-gap: 5.4rem;
+  row-gap: 9.6rem;
+}
+
+.grid--2--cols {
+  grid-template-columns: 2fr 1fr;
+}
+
+/*********************************/
+
+/* SECTION HEADER */
+
+/*********************************/
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6.2rem;
+  height: 8.2rem;
+  margin-bottom: 9.8rem;
+  background-color: #868e965d;
+  position: relative;
+}
+
+.main-logo {
+  font-size: 3rem;
+  color: #2e3944;
+  text-decoration: none;
+}
+
+/* 
+.main-nav {
+} */
+
+.main-nav-list {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  gap: 8.4rem;
+  font-weight: 550;
+}
+
+.main-nav-list a {
+  color: #fcf7e7;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav-home {
+}
+
+/* .nav-about {
+  color: #fcf7e7;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav-cta {
+  color: #fcf7e7;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav-footer {
+  color: #fcf7e7;
+  text-decoration: none;
+  text-transform: uppercase;
+} */
+
+/************************************/
+
+/* Mobile Navigation Bar */
+
+/************************************/
+
+.mob-nav-bar {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+}
+
+.icon-mob-nav {
+  color: #fcf7e7;
+  font-size: 4.8rem;
+}
+
+.icon-mob-nav[name="close-outline"] {
+  display: none;
+}
+
+/*******************/
+
+/* RESUABLE LOGO SECTION */
+
+/*******************/
+
+.main-logo .bx {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  margin: 0.5rem 1rem 0;
+}
+
+.main-logo {
+  color: #2e3944;
+  font-weight: 500;
+  font-size: 3rem;
+}
+
+/*************************************/
+
+/* RESUABLE BUTTONS SECTION */
+
+/*************************************/
+
+.btn:link,
+.btn:visited {
+  padding: 1.5rem 4rem;
+  background-color: #433503;
+  border-radius: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover,
+.btn:active {
+  color: #2e3944;
+  background-color: #f0d985;
+  font-weight: 600;
+}
+
+/* .hero-btns {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+} */
+
+.hero-btn {
+  color: #fcf7e7;
+  font-size: 1.4rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/*********************************/
+
+/* NAVIGATION SECTION */
+
+/*********************************/
+
+.nav:link,
+.nav:visited {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav:hover,
+.nav:active {
+  display: inline-block;
+  color: #fcf7e7;
+  line-height: 0;
+}
+
+/*************************************/
+
+/* HERO SECTION */
+
+/*************************************/
+
+.hero-section {
+  align-items: center;
+  justify-items: center;
+}
+
+.hero-info-sec {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.primary-heading {
+  font-family: "Playfair Display", serif;
+  color: #080808dc;
+  font-size: 6.2rem;
+  line-height: 1.1;
+  margin-bottom: 3.4rem;
+  /* margin-right: 4.4rem; */
+  grid-column: 1/-1;
+}
+
+.hero-info {
+  color: #080808d8;
+  font-size: 2rem;
+  padding: 0 6rem 0 0;
+  line-height: 1.5;
+  grid-column: 1/-1;
+  margin-bottom: 5.6rem;
+}
+
+.hero-btn-soc {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.social-icons {
+  margin-right: 2.4rem;
+}
+
+.social-icons a {
+  color: #080808dc;
+  font-size: 3rem;
+  text-decoration: none;
+  align-self: center;
+  margin-right: 3.2rem;
+}
+
+/*************************************/
+
+/* HERO IMAGE SECTION */
+
+/*************************************/
+
+.hero-img-sec {
+  position: relative;
+  width: 45rem;
+  height: 45rem;
+  justify-self: end;
+  align-items: center;
+}
+
+.hero-img {
+  position: absolute;
+  top: -2.3rem;
+  right: -1.5rem;
+  height: 50rem;
+  width: 50rem;
+}
+
+.hero-img-sec .rhombus {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background: #495057;
+  border-left: 2rem solid #868e96;
+  border-bottom: 2rem solid #868e96;
+  border-right: 2rem solid #e1b30b;
+  border-top: 2rem solid #e1b30b;
+  /* border: 0.3rem solid #868e96; */
+  /* border-top-left-radius: 0.2rem solid #e1b30b; */
+  border-radius: 50%;
+  box-shadow: 5px 0 0 rgba(0, 0, 0, 0.05);
+  transform: rotate(45deg);
+  z-index: -1;
+}
+
+/***************************************/
+
+/* PRODUCT SECTION */
+
+/***************************************/
